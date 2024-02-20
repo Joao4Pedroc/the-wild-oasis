@@ -1,5 +1,7 @@
 import supabase from "./supabase";
 
+/* eslint-disable */
+
 export async function getCabins() {
   let { data, error } = await supabase.from("cabins").select("*");
 
@@ -9,6 +11,18 @@ export async function getCabins() {
   }
 
   return data;
+}
+
+export async function createCabin(newCabin) {
+  const { data, error } = await supabase
+    .from("cabins")
+    .insert([newCabin])
+    .select();
+
+  if (error) {
+    console.error(error);
+    throw new Error("Cabins could not be created");
+  }
 }
 
 export async function deleteCabin(id) {
