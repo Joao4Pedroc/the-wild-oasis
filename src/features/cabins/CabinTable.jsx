@@ -33,7 +33,7 @@ const TableHeader = styled.header`
 function CabinTable() {
   const {
     isLoading,
-    data: cabins,
+    data: cabin,
     error,
   } = useQuery({ queryKey: ["cabin"], queryFn: getCabins });
 
@@ -51,7 +51,7 @@ function CabinTable() {
         <div>Discount</div>
         <div></div>
       </TableHeader>
-      {cabins.map((cabin) => (
+      {cabin.map((cabin) => (
         <CabinRow cabin={cabin} key={cabin.id} />
       ))}
     </Table>
