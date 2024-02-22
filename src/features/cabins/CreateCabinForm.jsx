@@ -31,7 +31,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
     mutationFn: createEditCabin,
     onSuccess: () => {
       toast.success("New cabin successfully created");
-      queryClient.invalidateQueries({ queryKey: ["cabins"] });
+      queryClient.invalidateQueries({ queryKey: ["cabin"] });
       reset();
     },
     onError: (err) => toast.error(err.message),
@@ -42,7 +42,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
     mutationFn: ({ newCabinData, id }) => createEditCabin(newCabinData, id),
     onSuccess: () => {
       toast.success("New cabin successfully edited");
-      queryClient.invalidateQueries({ queryKey: ["cabins"] });
+      queryClient.invalidateQueries({ queryKey: ["cabin"] });
       reset();
     },
     onError: (err) => toast.error(err.message),
