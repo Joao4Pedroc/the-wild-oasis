@@ -53,7 +53,7 @@ const Button = styled.button`
   }
 `;
 
-/* eslint-disable */
+/* eslint-disable react/prop-types */
 const ModalContext = createContext();
 
 function Modal({ children }) {
