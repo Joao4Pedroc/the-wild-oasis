@@ -7,6 +7,8 @@ import Table from "../../ui/Table";
 import { formatCurrency } from "../../utils/helpers";
 import { formatDistanceFromNow } from "../../utils/helpers";
 
+/* eslint-disable */
+
 const Cabin = styled.div`
   font-size: 1.6rem;
   font-weight: 600;
