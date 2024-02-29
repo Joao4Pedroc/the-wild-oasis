@@ -20,6 +20,8 @@ const Label = styled.span`
   }
 `;
 
+/* eslint-disable react/prop-types */
+
 function DataItem({ icon, label, children }) {
   return (
     <StyledDataItem>

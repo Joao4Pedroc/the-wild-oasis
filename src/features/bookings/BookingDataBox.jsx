@@ -21,6 +21,8 @@ const StyledBookingDataBox = styled.section`
   overflow: hidden;
 `;
 
+/* eslint-disable react/prop-types */
+
 const Header = styled.header`
   background-color: var(--color-brand-500);
   padding: 2rem 4rem;
